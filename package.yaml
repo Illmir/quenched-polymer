@@ -26,13 +26,13 @@ library:
     - Lib
   dependencies:
     - base >= 4.14
+    - Win32
     - monad-bayes
-    - numeric-log
-    - cassava
-
+    # - cassava
+    
 # The executable section
 executables:
-  my-ising-proj-exe:
+  quenched-polymer-exe:
     main: Main.hs
     source-dirs: app
     ghc-options:
@@ -40,7 +40,7 @@ executables:
       - -rtsopts
       - -with-rtsopts=-N
     dependencies:
-      - my-ising-proj
+      - quenched-polymer
 
 # We typically don't want to build tests/benchmarks that might pull in `vty`/unix
 tests:    {}

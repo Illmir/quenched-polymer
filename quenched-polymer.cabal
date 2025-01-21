@@ -1,0 +1,52 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.37.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           quenched-polymer
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/Illmir/quenched-polymer#readme>
+homepage:       https://github.com/Illmir/quenched-polymer#readme
+bug-reports:    https://github.com/Illmir/quenched-polymer/issues
+author:         Benjamín Pavez Ortega
+maintainer:     bipavez.o@gmail.com
+copyright:      2025 Benjamín Pavez Ortega
+license:        BSD-3-Clause
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/Illmir/quenched-polymer
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_quenched_polymer
+  autogen-modules:
+      Paths_quenched_polymer
+  hs-source-dirs:
+      src
+  build-depends:
+      Win32
+    , base >=4.14
+    , monad-bayes
+  default-language: Haskell2010
+
+executable quenched-polymer-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_quenched_polymer
+  autogen-modules:
+      Paths_quenched_polymer
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      quenched-polymer
+  default-language: Haskell2010
